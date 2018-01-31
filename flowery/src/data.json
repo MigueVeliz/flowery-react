@@ -1,0 +1,47 @@
+
+
+[
+	{
+		id: "1",
+		name: "Fresas de 15 pzas",
+		price: 28.00,
+		image: "https://image.ibb.co/ePwtpG/caja_de_15_fresas.jpg",
+		description: "15 fresas cubiertas de chocolate blanco,negro y sprinles"
+	}
+	{
+		id: "2",
+		name: "Fresas de 8 pzas",
+		price: 14.00,
+		image: "https://image.ibb.co/g4EtOb/caja_de_8_fresas.jpg",
+		description: "8 fresas cubiertas de chocolate blanco, negro y sprinkles"
+	}
+	{
+		id: "3",
+		name: "Brochetas 3 pzas",
+		price: 6.00,
+		image: "https://image.ibb.co/fdj4UG/brochetas.jpg",
+		description: "brochetas de bonbones y fresas cubiertas de chocolate blanco y negro"
+	}
+	{
+		id: "4",
+		name: "Bombones 20 pzas",
+		price: 9.00,
+		image: "https://image.ibb.co/irLpww/20_bombones.jpg",
+		description: "deliciosos bombones cubiertos de chocolate blanco y negro con sprinkles"
+	}
+	{
+		id: "5",
+		name: "Bombones 12 pzas",
+		price: 5.00,
+		image: "https://image.ibb.co/fmvpww/12_bombones.jpg",
+		description: "deliciosos bombones cubiertos de chocolate blanco y negro con sprinkles"
+	}
+	{
+		id: "6",
+		name: "Paletas de Bombom",
+		price: 1.50,
+		image: "https://image.ibb.co/hFgF3b/paletas_de_3_bombones.jpg",
+		description: "deliciosos bombones cubiertos de chocolate blanco y negro con sprinkles"
+	}
+]
+

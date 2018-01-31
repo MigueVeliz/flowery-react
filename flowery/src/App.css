@@ -1,0 +1,758 @@
+html, body, p {
+  padding: 0;
+  margin: 0;
+}
+
+/**************************************
+*************** Nav Bar ****************
+***************************************/
+
+
+.nav-bar {
+  width: 100vw;
+  height: 6vh;
+  /*background-color: #1B2845;*/
+  background-color: #E91E63;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.logo {
+  width: 6%;
+  /*text-align: center;*/
+  margin: 0 auto;
+  /*background-color: tomato;*/
+}
+
+.logo img {
+  width: 100%;
+  height: 4vh;
+  margin-top: 7px;
+}
+
+.login-button {
+  color: white;
+  font-size: 13px;
+  background-color: #BF1363;
+  /*display: inline-block;*/
+  padding: 8px 9px;
+}
+
+.login-button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.shopping-cart {
+  position: absolute;
+  display: inline-block;
+  padding: 7px 15px 8px 10px;
+  margin-top: 5px;
+  color: black;
+  right: 0;
+  top: 0;
+  /*background-color: tomato;*/
+}
+
+.shopping-cart:hover {
+  background-color: #171D1C;
+}
+
+.shopping-cart p, .shopping-cart i {
+  display: inline-block;
+  font-size: 15px;
+  padding: 5px;
+  /*margin-left: 6px;*/
+}
+
+.check-out {
+  /*background-color: indigo;*/
+  padding: 2px 5px;
+  margin-top: 4px;
+}
+
+
+/**************************************
+*************** CHECKOUT ****************
+***************************************/
+
+.checkout-section {
+  width: 50vw;
+  height: 100vh;
+  background-color: #F6F4F3;
+  background-color: white;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.StripeCheckoutButton {
+  width: 100%;
+  background-color: #3F88C5; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.back-to-shopping {
+  width: 100%;
+  text-align: center;
+  padding: 7px 1px;
+  background-color: #E85D75;;
+  color: #2E8E80;
+  color: white;
+  border: none;
+}
+
+.back-to-shopping:hover {
+  color: white;
+  /*background-color: #134074;*/
+}
+
+.current-items {
+  width: 50%;
+  min-height: 200px;
+
+  /*background-color: #FBFBFF;*/
+  display: inline-block;
+}
+
+.items-to-be-bought {
+  width: 100%;
+  /*background-color: #FFFAFF;*/
+  margin-bottom: 10px;
+  margin: 0 auto;
+  /*text-align: center;*/
+}
+
+.left-info {
+  width: 100%;
+  /*background-color: gray;*/
+  display: inline-block;
+  padding: 20px 0px;
+  border-bottom: 1px dotted gray;
+  margin: 0 auto;
+}
+
+.image-checking-out {
+  width: 30%;
+  margin-left: 30px;
+  display: inline-block;
+
+}
+
+.left-info h2 {
+  display: inline-block;
+  color: #040F16;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 30px;
+}
+
+.left-info h1 {
+  display: inline-block;
+  color: #040F16;
+  position: absolute;
+  margin: 30px 0px 0px 30px;
+
+}
+
+.message-area{
+  width: 25%;
+  /*height: 200px;*/
+  display: inline-block;
+  position: absolute; 
+  /*background-color: #FFFAFF;*/
+}
+
+.items-to-be-bought:hover {
+  background-color: #BFEDC1;
+}
+
+.times-span {
+  font-size: 20px;
+  margin-top: -7px;
+}
+
+/*.StripeCheckout2 {
+  background-color: red;
+  font-size: 40px;
+  display: inline;
+}
+*/
+.place-order-button {
+  width: 50%;
+  padding: 15px 0px;
+  margin: 0 auto;
+  border: none;
+  background-color: #395ca9;
+  color: white;
+  font-size: 14px;
+}
+
+.place-order-button:hover {
+  background-color: #134074;
+}
+
+.total {
+  width: 50%;
+  /*margin: 0 auto;*/
+  /*background-color: #68EDC6;*/
+  /*padding: 12px 0px;*/
+  margin-top: 60px;
+  margin-bottom: 15px;
+}
+
+.total h3 {
+  text-align: center;
+  font-size: 24px;
+  color: #28464B;
+}
+
+/**************************************
+************ Costumer Form ************
+***************************************/
+.payment-section {
+  width: 50%;
+  /*margin: 0 auto;*/
+  /*margin-top: 10px;*/
+  /*background-color: #FBFBFF;*/
+  padding: 12px 0px;
+
+}
+
+.receiving-person {
+  font-size: 17px;
+  margin-left: 15px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+#form {
+  position: relative;
+  /*width: 20vw;*/
+  margin: 50px auto 0px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 95%;
+  height: 50px;
+  padding: 0px 0px 0px 12px;
+  
+  background: transparent;
+  outline: none;
+  color: #726659;
+  
+  border: solid 1px #b3aca7;
+  /*border: none;*/
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #EDF2F4;
+  color: #e2dedb;
+}
+
+textarea {
+  width: 95%;
+  /*max-width: 470px;*/
+  height: 110px;
+  max-height: 110px;
+  padding: 10px 0px 10px 12px;
+  
+  background: transparent;
+  outline: none;
+  
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  
+  border: solid 1px #b3aca7;
+  border-right: none;
+  border-left: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #EDF2F4;
+  color: #e2dedb;
+}
+
+#submit {
+  width: 100%;
+  
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: white;
+  
+  outline:none;
+  cursor: pointer;
+  
+  border: solid 1px #b3aca7;
+  /*border-top: none;*/
+  border-right: none;
+  border-left: none;
+}
+
+#submit:hover {
+  color: #e2dedb;
+}
+
+
+
+/**************************************
+*************** SIDEBAR ****************
+***************************************/
+
+.sidebar {
+  width: 100vw;
+  /*height: 20vh;*/
+  background-color: #FFF;
+  /*background-color: crimson;*/
+  display: inline-block;
+  /*position: absolute;*/
+  /*margin: 0 auto;*/
+  text-align: center;
+  /*padding: 40px 3%;*/
+  /*white-space: nowrap;*/
+}
+
+.single-product {
+  width: 15%;
+  background-color: white;
+  /*background-color: blue;*/
+  margin: 0 auto;
+  /*margin-top: 6px;*/
+  display: inline-block;
+  margin: 40px 2% 0 2%;
+  border: solid #FCE4EC 1px;
+  /*padding-bottom: 30px;*/
+}
+
+.single-product ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+.image {
+  width: 80%;
+  height: 100%;
+  padding-bottom: 0px;
+  /*background-color: blue;*/
+  
+
+}
+
+
+.product-name {
+  font-family: 'Fjalla One';
+  font-size: 30px;
+
+}
+
+.product-price {
+  font-size: 40px;
+}
+
+.product-description {
+  font-family: 'Jura';
+}
+
+
+.add-to-cart-button {
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #F06292;
+  color: white;
+  color: #910322;
+  border: none;
+}
+/**************************************
+************ Main Container ***********
+***************************************/
+
+.main-container {
+  width: 100vw;
+  /*height: 70vh;*/
+  background-color: #F5F5F5;
+  display: inline-block;
+  padding: 50px 0;
+  margin-top: 50px;
+
+}
+
+.current-product-container {
+  width: 90vw;
+  height: 65vh;
+  background-color: #FFE4E1;
+  background-image: url("https://image.ibb.co/e3kMZR/PORTADA_DE_LA_PAGINA_FLOWERY.jpg");
+  background-size: 100% 100%;
+
+  margin: 0 auto;
+  /*margin-top: 50px;*/
+  /*margin-bottom: 70px;*/
+  text-align: center;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.main-image {
+  background-size: cover;
+}
+
+.onSaleItems {
+  width: 80vw;
+  height: 26vh;
+  background-color: #FFF;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.onSaleItems img {
+  width: 100%;
+  height: 100%;
+}
+
+.onSaleItem1 {
+  width: 33.4%;
+  height: 100%;
+  background-color: #DBFE87;
+  display: inline-block;
+}
+
+
+.onSaleItem2 {
+  width: 33.3%;
+  height: 100%;
+  background-color: #6F8695;
+  display: inline-block;
+}
+
+.onSaleItem3 {
+  width: 33.3%;
+  height: 100%;
+  background-color: #0C1B33;
+  display: inline-block;
+}
+
+/*.current-product-container img {
+  width: 100%;
+  height: 20%;
+  margin: 0 auto;
+
+}*/
+
+.current-product-container button {
+  width: 70%;
+  font-size: 15px;
+  background-color: #357DED;
+  color: white;
+  border: none;
+  padding: 7px 0px;
+
+
+}
+
+.current-product-info {
+  padding: 4px 20px;
+  line-height: 24px;
+  font-family: 'Lato', sans-serif;
+}
+
+.login {
+  width: 80vw;
+  height: 200px;
+  background-color: gray;
+  color: white;
+}
+
+
+/**************************************
+************ F o o t e r ***********
+***************************************/
+
+.footer {
+  width: 100vw;
+  /*height: 100px;*/
+  /*background-color: #1B2845;*/
+  background-color: #E91E63;
+
+  /*display: inline-block;*/
+  color: #FCFFFC;
+  /*color: #2E8E80;*/
+  text-align: center;
+  padding: 50px 0px;
+  /*bottom: 1;*/
+  margin-top: 100px;
+}
+
+.social-media {
+  width: 20vw;
+  padding: 5px 0px;
+  /*background-color: tomato;*/
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.social-media a:link {
+  color: #2E8E80;
+  color: white;
+}
+
+.social-media a:visited {
+  color: green;
+  color: white;
+
+}
+
+.my-icon {
+  font-size: 17px;
+  margin: 0px 6px 0px 6px;
+}
+
+
+
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-color: #011627;
+
+}
+
+
+/**************************************
+***************************************
+***************************************
+***************************************
+************ MEDIA QUERIES***********
+***************************************
+***************************************
+***************************************
+***************************************/
+
+
+@media screen and (max-width: 1080px) {
+  body {
+      /*background-color: lightgreen;*/
+  }
+
+  .nav-bar {
+    height: 7vh;
+  }
+
+  .logo {
+    width: 15%;
+  }
+
+  .logo img {
+    /*width: 100%;*/
+    height: 4vh;
+    margin-top: 4px;
+  }
+
+  /**************************************
+  ************ Main Container ***********
+  ***************************************/
+
+  .current-product-container {
+    width: 81vw;
+    height: 20vh;
+  }
+
+  .onSaleItems {
+    width: 81vw;
+    height: 100%;
+    text-align: center;
+    /*background-color: purple;*/
+
+    /*margin: 0 auto;*/
+  }
+
+  .onSaleItem1, .onSaleItem2, .onSaleItem3 {
+    width: 27vw;
+    height: 10vh;
+    /*display: inline-block;*/
+  }
+
+
+
+  /**************************************
+  *************** SIDEBAR ****************
+  ***************************************/
+  .single-product {
+    width: 25%;
+  }
+
+
+}
+
+
+/*********************************************************
+********************************************************
+*********************************************************/
+
+
+@media screen and (max-width: 480px) {
+  body {
+      /*background-color: red;*/
+  }
+
+
+  .nav-bar {
+    height: 7vh;
+  }
+
+  .logo {
+    width: 30%;
+  }
+
+  .logo img {
+    /*width: 100%;*/
+    height: 4vh;
+    margin-top: 7px;
+  }
+
+    /**************************************
+  ************ Main Container ***********
+  ***************************************/
+
+  .shopping-cart {
+    padding: 6px 15px 8px 10px;
+    margin-top: 1%;
+    color: black;
+  }
+
+  .shopping-cart:hover {
+    background-color: #171D1C;
+  }
+
+  .shopping-cart p, .shopping-cart i {
+    font-size: 18px;
+  }
+
+
+  .current-product-container {
+    width: 100vw;
+    height: 20vh;
+  }
+
+
+  /**************************************
+  *************** SIDEBAR ****************
+  ***************************************/
+  .single-product {
+    width: 90%;
+    height: 100%;
+  }
+
+  .product-name {
+    line-height: 26px;
+    margin-bottom: 7px;
+    font-size: 25px;
+    color: #0B3954;
+  }
+
+  .product-description {
+    font-size: 14px;
+    margin-bottom: 17px;
+  }
+
+  .product-price {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #56667A;
+  }
+
+  /**************************************
+  ************* CHECK OUT  ************
+  ***************************************/
+
+  .checkout-section {
+    width: 100vw;
+  }
+
+  .back-to-shopping {
+    height: 6vh;
+    font-size: 17px;
+  }
+
+  .current-items {
+    width: 100vw;
+    /*background-color: tomato;*/
+    display: inline-block;
+  }
+
+  .items-to-be-bought {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .image-checking-out {
+    width: 20%;
+  }
+
+  .left-info h2 {
+    font-size: 18px;
+  }
+
+  .left-info h1 {
+    font-size: 25px;
+  }
+
+  .message-area {
+    width: 100vw;
+    /*background-color: black;*/
+    position: static;
+  }
+
+  .payment-section {
+    width: 100vw;
+    text-align: center;
+    /*background-color: #8D99AE;*/
+  }
+
+  .total {
+    width: 100vw;
+  }
+
+  .place-order-button {
+    width: 100vw;
+  }
+
+
+}
+
+
+
+
+
+
+
+
