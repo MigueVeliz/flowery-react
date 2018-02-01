@@ -73,6 +73,14 @@ html, body, p {
   margin-top: 4px;
 }
 
+.order-confirmation-section {
+  width: 80vw;
+  height: 100vh;
+  background-color: #F3F8F2;
+  margin: 0 auto;
+  padding: 4px 20px;
+}
+
 
 /**************************************
 *************** CHECKOUT ****************
@@ -630,7 +638,7 @@ textarea:hover {
   }
 
   .logo {
-    width: 30%;
+    width: 22%;
   }
 
   .logo img {
@@ -657,12 +665,10 @@ textarea:hover {
     font-size: 18px;
   }
 
-
   .current-product-container {
     width: 100vw;
     height: 20vh;
   }
-
 
   /**************************************
   *************** SIDEBAR ****************

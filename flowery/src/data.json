@@ -3,45 +3,47 @@
 [
 	{
 		id: "1",
-		name: "Fresas de 15 pzas",
-		price: 28.00,
-		image: "https://image.ibb.co/ePwtpG/caja_de_15_fresas.jpg",
-		description: "15 fresas cubiertas de chocolate blanco,negro y sprinles"
+		name: "Caja con 18 Rosas",
+		price: 41.00,
+		image: "https://image.ibb.co/hzdaUR/CAJA_DE_18_FLORES.jpg",
+		description: "Contiene 18 rosas"
 	}
 	{
 		id: "2",
-		name: "Fresas de 8 pzas",
-		price: 14.00,
-		image: "https://image.ibb.co/g4EtOb/caja_de_8_fresas.jpg",
-		description: "8 fresas cubiertas de chocolate blanco, negro y sprinkles"
+		name: "Caja con 25 Rosas",
+		price: 55.00,
+		image: "https://image.ibb.co/fE0ppR/CAJA_DE_25_ROSAS.jpg",
+		description: "Contiene 25 rosas"
 	}
 	{
 		id: "3",
-		name: "Brochetas 3 pzas",
-		price: 6.00,
-		image: "https://image.ibb.co/fdj4UG/brochetas.jpg",
-		description: "brochetas de bonbones y fresas cubiertas de chocolate blanco y negro"
+		name: "Caja con 32 Rosas",
+		price: 69.00,
+		image: "https://image.ibb.co/hsJQUR/CAJA_DE_32_ROSAS.jpg",
+		description: "Contiene 32 rosas"
 	}
 	{
 		id: "4",
-		name: "Bombones 20 pzas",
-		price: 9.00,
-		image: "https://image.ibb.co/irLpww/20_bombones.jpg",
-		description: "deliciosos bombones cubiertos de chocolate blanco y negro con sprinkles"
+		name: "Caja redonda con 6 Rosas",
+		price: 17.00,
+		image: "https://image.ibb.co/cB3QUR/CAJA_REDONDA_6.jpg",
+		description: "Contiene 6 rosas"
 	}
 	{
 		id: "5",
-		name: "Bombones 12 pzas",
-		price: 5.00,
-		image: "https://image.ibb.co/fmvpww/12_bombones.jpg",
-		description: "deliciosos bombones cubiertos de chocolate blanco y negro con sprinkles"
+		name: "Caja redonda con 14 Rosas",
+		price: 32.00,
+		image: "https://image.ibb.co/kcHcR6/CAJA_REDONDA_DE_14_ROSAS.jpg",
+		description: "Contiene 6 rosas"
 	}
 	{
 		id: "6",
-		name: "Paletas de Bombom",
-		price: 1.50,
-		image: "https://image.ibb.co/hFgF3b/paletas_de_3_bombones.jpg",
-		description: "deliciosos bombones cubiertos de chocolate blanco y negro con sprinkles"
+		name: "Caja redonda con 9 Rosas",
+		price: 23.00,
+		image: "https://image.ibb.co/g4Oyim/CAJITA_DE_9_ROSAS.jpg",
+		description: "Contiene 6 rosas"
 	}
 ]
+
+
 

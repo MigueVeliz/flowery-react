@@ -17,7 +17,7 @@ class CheckOut extends Component {
 			name: "",
 			phoneNumber: "",
 			address: "",
-			Message: "N/A"
+			message: "N/A"
 		}
 	}
 
@@ -113,9 +113,7 @@ class CheckOut extends Component {
 	showStatus() {
 		console.log("PaymentStatus: " + this.state.paymentStatus);
 
-		return ( this.state.paymentStatus === true ? <h1>Works! </h1> : <h1>False</h1>  )
-
-
+		return ( this.state.paymentStatus === true ? <h1>Works! </h1> : <h1>False</h1>  );
 	}
 
 	//Gets payment status true or false from stripe checkout
@@ -162,6 +160,58 @@ class CheckOut extends Component {
 
 	}//end if sendOrderInformation
 
+	showMode() {
+		if(this.state.paymentStatus) {
+			return (
+				<div className="order-confirmation-section">
+
+					<h1>Than you, your order has been submitted!</h1>
+
+					<h3>If you have any question please call us at 347-609-8884 (hablamos español).</h3>
+
+				</div>
+
+			)
+		} else {
+			return (
+				<div>
+					<div className="current-items">
+						{ this.showItems() }
+					</div>
+
+					<div className="message-area">
+						{ this.showForm() }
+
+					</div>
+
+					<div className="total">
+
+						<h3>Your total is: { this.state.total } </h3>
+
+						{ /*this.showStatus()*/ }
+
+					</div>
+
+					<div className="payment-section">
+						
+						{/*<h2>Payment Information</h2>*/}
+
+						<Checkout 
+							name={'Sweetness'}
+							description={'Thanks <3'}
+							amount={this.state.total}
+							currency="USD"
+							className="StripeCheckout2"
+							// paymentConfirmation={'false'}
+
+							paymentStatus={ this.getPaymentStatus.bind(this) }
+						/>
+					</div>
+				</div>
+			)
+		} 
+	}
+
 
 
 
@@ -171,38 +221,7 @@ class CheckOut extends Component {
 
 				<button className="back-to-shopping" onClick={ () => { this.props.getMode("buying") }} >Back to shopping</button>
 
-				<div className="current-items">
-					{ this.showItems() }
-				</div>
-
-				<div className="message-area">
-					{ this.showForm() }
-
-				</div>
-
-				<div className="total">
-
-					<h3>Your total is: { this.state.total } </h3>
-
-					{ this.showStatus() }
-
-				</div>
-
-				<div className="payment-section">
-					
-					{/*<h2>Payment Information</h2>*/}
-
-					<Checkout 
-						name={'Sweetness'}
-						description={'Thanks <3'}
-						amount={this.state.total}
-						currency="USD"
-						className="StripeCheckout2"
-						// paymentConfirmation={'false'}
-
-						paymentStatus={ this.getPaymentStatus.bind(this) }
-					/>
-				</div>
+				{ this.showMode() }
 
 
 
