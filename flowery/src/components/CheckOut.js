@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Checkout from "../Checkout";
 import { status } from './Confirmation';
 
+import RecipientForm from './RecipientForm';
+
 class CheckOut extends Component {
 
 	constructor() {
@@ -18,10 +20,11 @@ class CheckOut extends Component {
 			phoneNumber: "",
 			address: "",
 			message: "",
-			showPayButton: false
+			showPayButton: false,
+			delivery: true,
+			clicked: false
 		}
 	}
-
 
 
 	// Remoe item from parsedItems array
@@ -40,20 +43,15 @@ class CheckOut extends Component {
 		// removes the product from the shopping cart
 		// array in the app.js state
 		this.props.removeItem(id);
-	}
-
+	}// end of removeItem
 
 
 	componentWillMount() {
-		//this.parseItemsQuantity();
 		console.log("componentWillMount running!");
 
 		this.showTotal();
 
-		//console.log("this.state.parsedItems:" + this.state.parsedItems.length)
-	}
-
-
+	}//end of ComponentWillMount
 
 	showItems() {
 		const items = this.props.shoppingCartItems;
@@ -92,7 +90,7 @@ class CheckOut extends Component {
 
 
 	//Getting From Data
-	handleNameChange(event) { this.setState({ name: event.target.value }); }
+/*	handleNameChange(event) { this.setState({ name: event.target.value }); }
 	handlePhoneChange(event) { this.setState({ phoneNumber: event.target.value }); }
 	handleAddressChange(event) { this.setState({ address: event.target.value }); }
 	handleMessageChange(event) { this.setState({ message: event.target.value }); }
@@ -102,14 +100,24 @@ class CheckOut extends Component {
 		 	<form id="form" className="topBefore" >
 				<h3 className="receiving-person">Person who's receiving:</h3>
 				<input id="name" type="text" placeholder="Name" name="name" value={this.state.name} onChange={ this.handleNameChange.bind(this) }/>
-			 	{/*<input id="email" type="text" placeholder="E-mail" />*/}
 			 	<input id="cell-number" type="number" placeholder="Cell Number" name="cellNumber" value={this.state.phoneNumber} onChange={ this.handlePhoneChange.bind(this) } />
-			 	<input id="Address" type="text" placeholder="Address" name="address" value={this.state.address} onChange={ this.handleAddressChange.bind(this) } />
+			 	<input id="Address" type="text" placeholder="Address i.e 4510 6th Avenue Brooklyn Ny 11220" name="address" value={this.state.address} onChange={ this.handleAddressChange.bind(this) } />
 			 	<textarea id="message" type="text" placeholder="Message" name="textarea" value={this.state.message} onChange={ this.handleMessageChange.bind(this) } ></textarea> 
-	  			{/*<input className="place-order-button" id="submit" type="submit" value="GO!" />*/}
   
 			</form>
 		)
+	}*/
+
+	getFormData(data) {
+
+		console.log("Data from RecipientForm: " + data);
+
+		this.setState({
+			name: data.name,
+			phoneNumber: data.phoneNumber,
+			address: data.address,
+			message: data.message
+		})
 	}
 
 
@@ -123,7 +131,7 @@ class CheckOut extends Component {
 	getPaymentStatus(status) {
 		console.log("Payment Successfull: " + status);
 
-		this.setState({ paymentStatus: status })
+		this.setState({ paymentStatus: status, clicked: status })
 
 		this.sendOrderInformation();
 	}
@@ -163,6 +171,19 @@ class CheckOut extends Component {
 
 	}//end if sendOrderInformation
 
+	selectDelivery(event) {
+		console.log("Delivery: " + event.target.innerText);
+
+		this.setState({ delivery: true })
+	}
+
+	selectPickUp(event) {
+		console.log("Delivery: " + event.target.innerText);
+
+		this.setState({ delivery: false })
+
+	}
+
 	showMode() {
 		if(this.state.paymentStatus) {
 			return (
@@ -183,7 +204,16 @@ class CheckOut extends Component {
 					</div>
 
 					<div className="message-area">
-						{ this.showForm() }
+
+						<button className="delivery" onClick={ this.selectDelivery.bind(this) }>Delivery</button>
+						<button className="pick-up" onClick={ this.selectPickUp.bind(this) }>Pick Up</button>
+
+						<RecipientForm 
+							delivery={this.state.delivery} 
+							clicked={this.state.clicked}
+							getFormData={this.getFormData.bind(this)}
+						/>
+						
 
 					</div>
 

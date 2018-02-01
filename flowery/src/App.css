@@ -88,7 +88,7 @@ html, body, p {
 
 .checkout-section {
   width: 50vw;
-  height: 100vh;
+  /*height: 100vh;*/
   background-color: #F6F4F3;
   background-color: white;
   margin: 0 auto;
@@ -172,6 +172,28 @@ html, body, p {
   color: #040F16;
   position: absolute;
   margin: 30px 0px 0px 30px;
+
+}
+
+.delivery, .pick-up {
+  width: 50%;
+  background-color: turquoise;
+  margin: 0;
+  padding: 7px 0px;
+  border: none;
+  font-weight: bold;
+}
+
+.pick-up {
+  background-color: pink;
+}
+
+.delivery-section {
+  width: 80vw;
+  padding: 30px 0px;
+  text-align: center;
+  /*background-color: crimson;*/
+  margin: 0 auto;
 
 }
 
