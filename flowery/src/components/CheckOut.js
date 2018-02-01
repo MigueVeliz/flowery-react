@@ -17,7 +17,8 @@ class CheckOut extends Component {
 			name: "",
 			phoneNumber: "",
 			address: "",
-			message: "N/A"
+			message: "",
+			showPayButton: false
 		}
 	}
 
@@ -83,6 +84,8 @@ class CheckOut extends Component {
 
 		this.setState({ total: total })
 
+		total > 0 ? this.setState({ showPayButton: true }) : this.setState({ showPayButton: false });
+
 		console.log(`total is ${total}`);
 
 	}// end of showTotal
@@ -102,7 +105,7 @@ class CheckOut extends Component {
 			 	{/*<input id="email" type="text" placeholder="E-mail" />*/}
 			 	<input id="cell-number" type="number" placeholder="Cell Number" name="cellNumber" value={this.state.phoneNumber} onChange={ this.handlePhoneChange.bind(this) } />
 			 	<input id="Address" type="text" placeholder="Address" name="address" value={this.state.address} onChange={ this.handleAddressChange.bind(this) } />
-			 	<textarea id="message" type="text" placeholder="MESSAGE" name="textarea" value={this.state.message} onChange={ this.handleMessageChange.bind(this) } ></textarea> 
+			 	<textarea id="message" type="text" placeholder="Message" name="textarea" value={this.state.message} onChange={ this.handleMessageChange.bind(this) } ></textarea> 
 	  			{/*<input className="place-order-button" id="submit" type="submit" value="GO!" />*/}
   
 			</form>
@@ -201,9 +204,10 @@ class CheckOut extends Component {
 							description={'Thanks <3'}
 							amount={this.state.total}
 							currency="USD"
-							className="StripeCheckout2"
+							// className="StripeCheckout2"
 							// paymentConfirmation={'false'}
 
+							showPayButton={ this.state.showPayButton }
 							paymentStatus={ this.getPaymentStatus.bind(this) }
 						/>
 					</div>

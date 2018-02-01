@@ -43,7 +43,7 @@ const onToken = (amount, description, paymentStatus) => token =>
 	.then( paymentStatus(true) )
 	.catch(errorPayment);
 
-const Checkout = ({ name, description, amount, paymentStatus }) =>
+const Checkout = ({ name, description, amount, paymentStatus, showPayButton }) =>
 	<StripeCheckout
 		name={name}
 		description={description}
@@ -52,7 +52,7 @@ const Checkout = ({ name, description, amount, paymentStatus }) =>
 		currency={CURRENCY}
 		stripeKey={STRIPE_PUBLISHABLE}
 		>
-		<button className="StripeCheckoutButton" >
+		<button className= { !showPayButton ? "hide-payment-button" : "StripeCheckoutButton" } >
 			Pay With Card
 		</button>
 	</StripeCheckout>

@@ -107,6 +107,11 @@ html, body, p {
   font-size: 16px;
 }
 
+.hide-payment-button {
+  display: none;
+
+}
+
 .back-to-shopping {
   width: 100%;
   text-align: center;
@@ -271,8 +276,8 @@ input {
 }
 
 input:hover {
-  background: #EDF2F4;
-  color: #e2dedb;
+  background: #F3F8F2;
+  color: #726659;
 }
 
 textarea {
@@ -300,8 +305,8 @@ textarea {
 }
 
 textarea:hover {
-  background: #EDF2F4;
-  color: #e2dedb;
+  background: #F3F8F2;
+  color: #726659;
 }
 
 #submit {

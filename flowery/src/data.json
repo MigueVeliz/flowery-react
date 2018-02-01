@@ -32,16 +32,16 @@
 	{
 		id: "5",
 		name: "Caja redonda con 14 Rosas",
-		price: 32.00,
+		price: 33.00,
 		image: "https://image.ibb.co/kcHcR6/CAJA_REDONDA_DE_14_ROSAS.jpg",
-		description: "Contiene 6 rosas"
+		description: "Contiene 14 rosas"
 	}
 	{
 		id: "6",
 		name: "Caja redonda con 9 Rosas",
 		price: 23.00,
 		image: "https://image.ibb.co/g4Oyim/CAJITA_DE_9_ROSAS.jpg",
-		description: "Contiene 6 rosas"
+		description: "Contiene 9 rosas"
 	}
 ]
 
