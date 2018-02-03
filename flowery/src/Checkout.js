@@ -15,7 +15,7 @@ const CURRENCY = 'USD';
 const fromEuroToCent = amount => amount * 100;
 
 const successPayment = data => {
-	alert('Payment Successfull!');
+	alert('Payment Successfull!' + data);
 
 	Confirmation();
 
@@ -25,7 +25,7 @@ const successPayment = data => {
 };
 
 const errorPayment = data => {
-	alert('Payment error!');
+	alert('Payment error!' + data);
 
 	// console.log("Payment Confirmation: " + this.props.paymentConfirmation );
 

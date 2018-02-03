@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "firebase": "^4.8.2",
+    "nodemailer": "^4.4.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.11",

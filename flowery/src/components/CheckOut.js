@@ -22,7 +22,8 @@ class CheckOut extends Component {
 			message: "",
 			showPayButton: false,
 			delivery: true,
-			clicked: false
+			clicked: false,
+			sentOrderInformation: false
 		}
 	}
 
@@ -110,14 +111,17 @@ class CheckOut extends Component {
 
 	getFormData(data) {
 
-		console.log("Data from RecipientForm: " + data);
+		console.log("Data from RecipientForm: " + data.name);
 
-		this.setState({
+/*		this.setState({
 			name: data.name,
 			phoneNumber: data.phoneNumber,
 			address: data.address,
 			message: data.message
-		})
+		});*/
+
+		this.state.paymentStatus ? this.sendOrderInformation(data) : console.log("I cant make an api call yet!")
+
 	}
 
 
@@ -133,15 +137,18 @@ class CheckOut extends Component {
 
 		this.setState({ paymentStatus: status, clicked: status })
 
-		this.sendOrderInformation();
+		// console.log("this.state.clicked: " + this.state.clicked);
+
+
+		// this.sendOrderInformation();
 	}
 
 	//Will make an api call to save order information
-	sendOrderInformation() {
-		const name = this.state.name;
+	sendOrderInformation(data) {
+		/*const name = this.state.name;
 		const phoneNumber = this.state.phoneNumber;
 		const address = this.state.address;
-		const message = this.state.message;
+		const message = this.state.message;*/
 		const total = this.state.total;
 		const status = "New Order";
 
@@ -154,10 +161,10 @@ class CheckOut extends Component {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
-				name: name,
-				phoneNumber: phoneNumber,
-				address: address,
-				message: message,
+				name: data.name,
+				phoneNumber: data.phoneNumber,
+				address: data.address,
+				message: data.message,
 				status: status,
 				total: total
 			})
@@ -167,7 +174,7 @@ class CheckOut extends Component {
 		})
 		.catch( error => console.log("Error: " + error));
 
-
+		this.setState({ sentOrderInformation: true })
 
 	}//end if sendOrderInformation
 
@@ -185,7 +192,7 @@ class CheckOut extends Component {
 	}
 
 	showMode() {
-		if(this.state.paymentStatus) {
+		if(this.state.sentOrderInformation) {
 			return (
 				<div className="order-confirmation-section">
 
@@ -211,7 +218,8 @@ class CheckOut extends Component {
 						<RecipientForm 
 							delivery={this.state.delivery} 
 							clicked={this.state.clicked}
-							getFormData={this.getFormData.bind(this)}
+							paymentStatus={this.state.paymentStatus}
+							getFormData={ this.getFormData.bind(this) }
 						/>
 						
 

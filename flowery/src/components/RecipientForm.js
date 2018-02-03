@@ -47,7 +47,7 @@ class RecipientForm extends Component {
 	}
 
 	showMode() {
-		console.log("clicked:" + this.props.clicked);
+		// console.log("this.props.delivery:" + this.props.delivery);
 
 		return ( this.props.delivery ? this.showDeliverySection() : this.showPickUpSection() );
 
@@ -57,12 +57,14 @@ class RecipientForm extends Component {
 
 		const formData = this.state;
 
-		// this.props.clicked ? this.props.getFormData(formData) : "";
+		this.props.getFormData(formData.name);
 
-		this.props.getFormData(formData);
+		console.log("formData:" + formData.name);
 
-		console.log("clicked:" + this.props.clicked);
-		console.log("Running: sendDataBacktoCheckout and sending this data:" + this.state );
+		//this.props.paymentStatus ? this.props.getFormData(formData) : console.log("it will work") ;
+
+		// console.log("clicked:" + this.props.clicked);
+		console.log("Running: sendDataBacktoCheckout and sending this data:" + this.state.name );
 	}
 
 
@@ -70,10 +72,14 @@ class RecipientForm extends Component {
 		return (
 			<div className="checkout-section">
 
+				{ /*this.props.paymentStatus ? this.sendDataBacktoCheckout() : console.log(this.state)*/ }
+
+
 				{ this.showMode() }
 
+				{ this.props.getFormData(this.state) }
+
 				{ /*this.props.clicked ? this.sendDataBacktoCheckout() : ""*/ }
-				{ this.props.clicked ? this.props.getFormData(this.state) : console.log(this.state) }
 
 			</div>
 		);
